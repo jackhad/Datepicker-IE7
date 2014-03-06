@@ -26,9 +26,13 @@ if(pattern.test(dp)==false)
 
 //var EnteredDate =dateFromISO(a); // For JQuery 
 var EnteredDate=dateFromISO($("#CandidateApplication_dob").val());
-var date = EnteredDate.substring(0, 2);
-var month = EnteredDate.substring(3, 5);
-var year = EnteredDate.substring(6, 10);
+//var date = EnteredDate.substring(0, 2);
+//var month = EnteredDate.substring(3, 5);
+//var year = EnteredDate.substring(6, 10);
+alert(EnteredDate);
+var date = EnteredDate.toString().substring(0, 2);
+var month = EnteredDate.toString().substring(3, 5);
+var year = EnteredDate.toString().substring(6, 10);
 
 var myDate = new Date(year, month - 1, date);
 
