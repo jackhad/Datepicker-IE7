@@ -1,0 +1,34 @@
+Datepicker-IE7
+==============
+
+$this->widget('zii.widgets.jui.CJuiDatePicker',
+	array(
+		
+		'model'=>$model,
+	        'attribute'=>'dob',
+		'name'=>'CandidateApplication[dob]', 
+		'options' => array(
+			'dateFormat'=>'dd-mm-yy',
+			//'value'=>$dob_new,
+			'maxlength'=>'10',
+			'changeMonth' => 'true',
+			'changeYear' => 'true',
+			'showButtonPanel' => 'true',
+			'constrainInput' => 'false',
+			'yearRange' => '1930:2015',
+			'duration'=>'fast',
+			'showAnim' =>'slide',
+		),
+		'htmlOptions'=>array(
+		'autocomplete'=>"off",
+		'onChange' => "datecheck(this.value);",
+		'style'=>'height:20px;
+			background:white;
+			color:#00a;
+			font-weight:bold;
+			font-size:0.9em;
+			*width:80%;
+			padding-left: 4px;'
+		)
+	)
+);
